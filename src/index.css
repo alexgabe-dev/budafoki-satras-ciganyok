@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Ultra&family=Rye&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+  --font-retro: "Ultra", serif;
+  --font-rye: "Rye", cursive;
+
+  --color-turquoise: #2F9EAA;
+  --color-sand: #F2C98B;
+  --color-cream: #FFF1D0;
+  --color-darkbrown: #3A2418;
+  --color-olive: #4F5B34;
+  --color-orange: #D9793D;
+  
+  --shadow-retro: 4px 4px 0px 0px #3A2418;
+  --shadow-retro-lg: 8px 8px 0px 0px #3A2418;
+  --shadow-retro-sm: 2px 2px 0px 0px #3A2418;
+
+  --animate-scale-up: scale-up 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-fade-in: fade-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes scale-up {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@utility retro-border {
+  border: 3px solid #3A2418;
+}
+
+@utility retro-border-thick {
+  border: 5px solid #3A2418;
+}
+
+@utility retro-shadow {
+  box-shadow: 4px 4px 0px 0px #3A2418;
+}
+
+@utility retro-shadow-lg {
+  box-shadow: 8px 8px 0px 0px #3A2418;
+}
+
+@utility retro-shadow-sm {
+  box-shadow: 2px 2px 0px 0px #3A2418;
+}
+
+@utility text-stroke-retro {
+  -webkit-text-stroke: 1.5px #3A2418;
+}
+
+@utility text-stroke-retro-thick {
+  -webkit-text-stroke: 3px #3A2418;
+}
+
+/* Custom background patterns */
+.paper-texture {
+  background-color: #FFF1D0;
+  background-image: 
+    radial-gradient(rgba(58, 36, 24, 0.05) 1px, transparent 0),
+    radial-gradient(rgba(58, 36, 24, 0.05) 1px, transparent 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+.wood-texture {
+  background-color: #3A2418;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 241, 208, 0.03) 0px,
+    rgba(255, 241, 208, 0.03) 4px,
+    transparent 4px,
+    transparent 40px
+  );
+}
+
+.wood-horizontal {
+  background-color: #3A2418;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 241, 208, 0.04) 0px,
+    rgba(255, 241, 208, 0.04) 6px,
+    transparent 6px,
+    transparent 80px
+  ), linear-gradient(180deg, #3A2418 0%, #2b1a11 100%);
+}
+
+/* Garland style lights */
+.string-light {
+  position: relative;
+}
+
+.string-light::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(58, 36, 24, 0.4);
+  z-index: 10;
+}
+
+/* Stamp styles */
+.stamp-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 3px dashed #D9793D;
+  color: #D9793D;
+  font-family: "Ultra", serif;
+  transform: rotate(-5deg);
+  border-radius: 4px;
+}
+
+/* Custom glass / card overlays */
+.retro-card-yellow {
+  background-color: #F2C98B;
+  border: 3px solid #3A2418;
+  box-shadow: 4px 4px 0px 0px #3A2418;
+  border-radius: 12px;
+}
+
+.retro-card-cream {
+  background-color: #FFF1D0;
+  border: 3px solid #3A2418;
+  box-shadow: 4px 4px 0px 0px #3A2418;
+  border-radius: 12px;
+}
+
+/* Floating animation for bulbs */
+@keyframes pulse-light {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px 2px rgba(242, 201, 139, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 16px 4px rgba(242, 201, 139, 0.9), 0 0 4px 1px rgba(217, 121, 61, 0.5);
+  }
+}
+
+.bulb {
+  animation: pulse-light 2s infinite ease-in-out;
+}
+
+.bulb:nth-child(even) {
+  animation-delay: 0.7s;
+}
+
+.bulb:nth-child(3n) {
+  animation-delay: 1.3s;
+}
+
