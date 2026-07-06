@@ -559,7 +559,7 @@ export default function TicketsPage() {
                             Revolut Támogatás Ellenőrzése
                           </h4>
                           <p className="font-sans font-bold text-[10px] text-darkbrown/70 leading-normal mt-1.5">
-                            A Támogatói bérlet ára <strong className="text-blue-600 font-extrabold">5 000 Ft</strong>, amit közvetlenül a <a href="https://revolut.me/budafoki" target="_blank" rel="noreferrer" className="text-blue-600 underline font-black">revolut.me/budafoki</a> linken vagy a Budafoki Zarándokház számlájára utalva tudsz rendezni.
+                            A Támogatói bérlet ára <strong className="text-blue-600 font-extrabold">5 000 Ft</strong>, amit közvetlenül a <a href="https://revolut.me/gbrsanyi?currency=HUF&amount=500000&note=T%C3%A1mogat%C3%B3i%20jegy" target="_blank" rel="noreferrer" className="text-blue-600 underline font-black">revolut.me/budafoki</a> linken vagy a Budafoki Zarándokház számlájára utalva tudsz rendezni.
                           </p>
                         </div>
                       </div>
