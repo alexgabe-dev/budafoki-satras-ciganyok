@@ -94,7 +94,7 @@ export default function About() {
           <p className="font-sans italic font-bold text-darkbrown/80">
             "A sátorozás lényege nem a luxus, hanem az az érzés, amikor reggel kicipzározod a sátrad, és a Duna illata csap meg először."
           </p>
-          <p className="font-retro text-[11px] text-orange mt-2 tracking-widest uppercase">— II. BSC Szervezőség</p>
+          <p className="font-retro text-[11px] text-orange mt-2 tracking-widest uppercase">— A BFZH vezetősége</p>
         </div>
 
       </div>
